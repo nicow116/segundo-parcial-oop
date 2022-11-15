@@ -1,0 +1,35 @@
+@startuml
+Cliente <|--  registrar
+Cliente *-- Metodo_pago
+
+
+class Metodo_pago {
+
+Metodo_pago : pagar_efectivo(Cliente cliente, int valor)
+Metodo_pago : pagar_tarjeta_db(Cliente cliente, int valor)
+Metodo_pago : pagar_tarjeta_cr(Cliente cliente, int valor)
+
+
+}
+class Cliente {
+cliente: int nombre 
+cliente: string boleta
+cliente: string pelicula
+cliente: float hora
+cliente: int asientos
+elegir_bol()
+
+}
+
+   class  registrar {
+
+
+registrar_clie()
+
+}
+
+abstract  class  "vender "{
+vender_bol()
+
+}
+@enduml
